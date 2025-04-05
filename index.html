@@ -5,6 +5,8 @@
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+  <link rel="stylesheet" href="./src/swiper/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="./src/css/main.css">
   </head>
   <body>
@@ -28,9 +30,27 @@
           <div class="item"></div>
         </div>
          <!-- #endregion menu-->
+         <!-- #region slider-->
+
+         <div class="slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./src/image/Download.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="./src/image/Download.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="./src/image/Download.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="./src/image/Download.jpeg" alt=""></div>
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+         </div>
+           <!-- #endregion slider-->
+
      </div>
     <!-- #endregion wrapper-->
-  
+  <script src="./src/swiper/swiper-bundle.min.js"></script>
     <script>
       let menu_mobile = document.querySelector(".mobile_menu");
       let menu=document.querySelector(".menu")
@@ -40,6 +60,22 @@
        /*alert('msg'); message appear but we want to appear menu */
         menu.classList.toggle("active");
       })
+      var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
       
     </script>

@@ -4,6 +4,7 @@
     background-color: #0b0b0b;
     position: absolute;
     left: -100%;
+    z-index: 9999;
     transition: 300ms;
     .nav {
       width: 100%;
@@ -57,6 +58,7 @@ img{
     top: 10px;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 9999;
     .item:nth-of-type(1){
         width: 80%;
         height: 2px;
